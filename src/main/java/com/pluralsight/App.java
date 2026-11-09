@@ -2,8 +2,14 @@ package com.pluralsight;
 
 public class App {
     public static void main(String[] args) {
-        Reservation r1 = new Reservation("king", 1, true);
-        System.out.println(r1.getReservationTotal());
+        Room room1 = new Room(4, 50, false, false);
+        System.out.println("Available: " + room1.isAvailable());
+
+        Room room2 = new Room(4, 50, true, true);
+        System.out.println("Available: " + room2.isAvailable());
+
+        Reservation reservation1 = new Reservation("king", 1, true);
+        System.out.println(reservation1.getReservationTotal());
 
         Employee e1 = new Employee("123456", "Jane", "Front Desk",
                 20, 20);
