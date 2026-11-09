@@ -30,10 +30,6 @@ public class Room {
     }
 
     public boolean isAvailable() {
-        if (!this.isOccupied && !this.isDirty) {
-            return true;
-        } else  {
-            return false;
-        }
+        return !this.isOccupied && !this.isDirty;
     }
 }
