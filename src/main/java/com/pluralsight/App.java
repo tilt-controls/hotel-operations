@@ -40,7 +40,7 @@ public class App {
         Employee e3 = new Employee("505050", "Paul", "Cook", 20, 0);
         e3.punchIn();
         e3.punchOut();
-        System.out.println("Hours worked: " + e3.getHoursWorked());
+        System.out.printf("Hours worked: %.2f\n", e3.getHoursWorked());
 
         Hotel hotel1 = new Hotel("Lakeside Inn", 2, 10);
         System.out.println("Booking 2 suites: " + hotel1.bookRoom(2, true));

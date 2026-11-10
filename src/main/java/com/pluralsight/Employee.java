@@ -61,14 +61,15 @@ public class Employee {
         startTime = time;
     }
     public void punchIn() {
-        DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("HH");
-        startTime = Double.parseDouble(LocalDateTime.now().format(timeFormat));
+        LocalDateTime now = LocalDateTime.now();
+        startTime = now.getHour() + now.getMinute() / 60.0;
     }
     public void punchOut(int time) {
         hoursWorked += time - startTime;
     }
     public void punchOut() {
-        DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("HH");
-        hoursWorked += Double.parseDouble(LocalDateTime.now().format(timeFormat)) - startTime;
+        LocalDateTime now = LocalDateTime.now();
+        hoursWorked += now.getHour() + now.getMinute() / 60.0 - startTime;
     }
+
 }
