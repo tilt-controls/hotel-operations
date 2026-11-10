@@ -17,7 +17,7 @@ public class App {
         System.out.printf("Reservation total for 3 nights: %.2f\n", reservation2.getReservationTotal());
 
         Employee e1 = new Employee("123456", "Jane", "Front Desk",
-                0, 0);
+                20, 20);
 
         System.out.printf("Pay without overtime: %.2f\n", e1.getTotalPay());
 
