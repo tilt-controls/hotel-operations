@@ -34,16 +34,21 @@ public class Room {
     }
 
     public void checkIn() {
-        this.occupied = true;
-        this.dirty = true;
+        if (!dirty && !occupied) {
+            this.occupied = true;
+            this.dirty = true;
+        }
+
     }
     public void checkOut() {
         this.occupied = false;
         this.dirty = true;
     }
     public void cleanRoom() {
+        if (!occupied && dirty) {
         this.dirty = false;
-        this.occupied = false;
+        this.occupied = false; }
+
     }
 
 }
