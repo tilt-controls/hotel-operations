@@ -37,6 +37,9 @@ public class App {
         e1.punchOut(14);
         System.out.println("Hours worked: " + e1.getHoursWorked());
 
-
+        Employee e3 = new Employee("505050", "Paul", "Cook", 20, 0);
+        e3.punchIn();
+        e3.punchOut();
+        System.out.println("Hours worked: " + e3.getHoursWorked());
     }
 }

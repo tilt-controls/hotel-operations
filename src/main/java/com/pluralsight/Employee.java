@@ -1,4 +1,7 @@
 package com.pluralsight;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 
 public class Employee {
     private String employeeId;
@@ -57,7 +60,15 @@ public class Employee {
     public void punchIn(int time) {
         startTime = time;
     }
+    public void punchIn() {
+        DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("HH");
+        startTime = Double.parseDouble(LocalDateTime.now().format(timeFormat));
+    }
     public void punchOut(int time) {
         hoursWorked += time - startTime;
+    }
+    public void punchOut() {
+        DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("HH");
+        hoursWorked += Double.parseDouble(LocalDateTime.now().format(timeFormat)) - startTime;
     }
 }
