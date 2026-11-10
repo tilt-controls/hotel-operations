@@ -8,6 +8,8 @@ public class App {
         Room room2 = new Room(4, 50, true, true);
         System.out.println("Available: " + room2.isAvailable());
 
+        Room room3 = new Room(4, 50, false, false);
+
         Reservation reservation1 = new Reservation("king", 1, true);
         System.out.printf("Reservation total: %.2f\n", reservation1.getReservationTotal());
 
@@ -22,5 +24,13 @@ public class App {
         Employee e2 = new Employee("098765", "John", "House Keeping",
                 20, 45);
         System.out.printf("Pay with overtime: %.2f\n", e2.getTotalPay());
+
+        System.out.println("Clean unoccupied room status: " + room3.isAvailable());
+        room3.checkIn();
+        System.out.println("Room status after check in: " + room3.isAvailable());
+        room3.checkOut();
+        System.out.println("Room status after check out: " + room3.isAvailable());
+        room3.cleanRoom();
+        System.out.println("Room status after clean room: " + room3.isAvailable());
     }
 }
