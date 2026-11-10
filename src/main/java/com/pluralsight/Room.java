@@ -45,4 +45,5 @@ public class Room {
         this.dirty = false;
         this.occupied = false;
     }
+
 }
