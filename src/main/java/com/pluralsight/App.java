@@ -41,5 +41,12 @@ public class App {
         e3.punchIn();
         e3.punchOut();
         System.out.println("Hours worked: " + e3.getHoursWorked());
+
+        Hotel hotel1 = new Hotel("Lakeside Inn", 2, 10);
+        System.out.println("Booking 2 suites: " + hotel1.bookRoom(2, true));
+
+        System.out.println("Booking 1 suite over availability: " + hotel1.bookRoom(1, true));
+
+        System.out.println("Available suites now: " + hotel1.getAvailableSuites());
     }
 }
