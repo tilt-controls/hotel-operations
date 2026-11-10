@@ -17,7 +17,7 @@ public class App {
         System.out.printf("Reservation total for 3 nights: %.2f\n", reservation2.getReservationTotal());
 
         Employee e1 = new Employee("123456", "Jane", "Front Desk",
-                20, 20);
+                0, 0);
 
         System.out.printf("Pay without overtime: %.2f\n", e1.getTotalPay());
 
@@ -32,5 +32,11 @@ public class App {
         System.out.println("Room status after check out: " + room3.isAvailable());
         room3.cleanRoom();
         System.out.println("Room status after clean room: " + room3.isAvailable());
+
+        e1.punchIn(10);
+        e1.punchOut(14);
+        System.out.println("Hours worked: " + e1.getHoursWorked());
+
+
     }
 }
