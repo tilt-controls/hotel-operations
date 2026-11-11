@@ -56,7 +56,7 @@ class RoomTest {
         assertFalse(room.isAvailable());
     }
     @Test
-    public void checkIn_should_stayDirtyAndUnavailable_whenOccoupied() {
+    public void checkIn_should_stayDirtyAndUnavailable_whenOccupied() {
         // arrange
         Room room = new Room(2, 30, true, false);
 
